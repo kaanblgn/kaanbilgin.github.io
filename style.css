@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/*Renk seçenekleri 
+#FF6240
+#0a3d62 
+rgba(34,54,69,.7)
+rgba(108, 122, 165, 0.4)
+#b1b4bd 
+#d0d5e6
+rgba(228, 233, 237, 1)
+*/
+
+/* Scrooling behavior, nav-item properties and general properties */
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-family: 'Poppins';
+  line-height: 26px;
+  color: rgba(228, 233, 237, 1);
+  background-color: rgba(1, 18, 31, 0.93);
+}
+a{
+  color: rgba(228, 233, 237, 1);
+  font-weight: 500;
+}
+
+.nav-item a{
+  color: rgba(228, 233, 237, 1);
+  margin-left: 17px;
+}
+.nav-item a:hover{
+  color: #ff6320de;
+}
+.nav-item a:focus{
+  color: rgba(228, 233, 237, 1)
+}
+.nav-item .fa{
+  font-size: 2.5rem;
+  color: rgba(228, 233, 237, 1);
+}
+.nav-item .fa:hover{
+  transition:  .2s ease-in-out;
+  transform: scale(1.15);
+  color: #ff6320de;
+}
+
+/* Navbar dropdown properties */
+.navbar .nav-item .dropdown-menu{ 
+  display: none;
+  color: rgba(6, 51, 82, 0.4);
+}
+.navbar .nav-item:hover .dropdown-menu{ 
+  display: block;
+  background-color: rgba(6, 51, 82, 0.4);
+  border-top: 0px;
+}
+.navbar .nav-item:hover .dropdown-menu a{ 
+  background-color: rgba(6, 51, 82, 0.1);
+  color: rgba(228, 233, 237, 1);
+}
+.dropdown-menu a:hover{
+  color:  #ff6320de !important;
+}
+
+/* header and background */
+.header-background{
+  position: static;
+  display: flex;
+  overflow: visible;
+  top: 0;
+  height: auto;
+  min-height: 50px;
+  margin-bottom: 0px;
+  padding-bottom: 80%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(50,58,69,.9)));
+  background-image: linear-gradient(180deg, rgb(50,58,69,.55), rgba(50,58,69,.75)), url(images_benim/aboutme/dev.jpg);
+  flex-direction: column;
+  background-position: 0px 0px, 100% 100%;
+  background-size: auto, cover;
+  white-space: normal;
+  object-fit: fill; 
+  -o-object-fit: fill;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: normal;
+  -ms-flex-direction: column;
+}
+
+/* navbar stickyness */
+.sticky-nav{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  padding: 22px;
+  z-index: 1;
+  -webkit-align-self: auto;
+  align-self: auto;
+  -ms-flex-item-align: auto;
+  -ms-grid-row-align: auto;
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  background-color: rgba(6, 51, 82, 0.4);
+}
+
+/* navbar-brand */
+.navbar .navbar-brand a{
+  padding: 1rem 0;
+  display: block;
+  text-decoration: none ;
+  font-size: 2.2rem;
+  color: rgba(228, 233, 237, 1);
+}
+.navbar .navbar-brand:hover{
+  color: rgba(228, 233, 237, 1);
+}
+.navbar-brand{
+  padding: 1rem 1rem;
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: rgba(228, 233, 237, 1);
+  border-radius: 10px;
+}
+.navbar-brand:hover{
+  transition:  .5s ease-in-out;
+  transform: scale(1.2);
+  color: #ff6320de !important;
+}
+
+/* navbar-toggler */
+.navbar-toggler{
+  border: none;
+  padding: 22px;
+  outline-color: none;
+}
+.navbar-toggler span{
+  display: block;
+  width: 20px;
+  height: 2px;
+  border: 1px;
+  background-color: rgba(228, 233, 237, 1);
+}
+.navbar-toggler span + span{
+  margin-top: 4px;
+  width: 20px;
+}
+.navbar-toggler span + span + span{
+  width: 20px;  
+}
+.navbar-toggler:hover{
+  transition: .5s ease-in-out;
+  transform: scale(1.2);
+  background-color: #ff6320de;
+}
+.navbar-toggler:focus{
+  outline: none !important;
+  box-shadow: none;
+}
+.navbar-toggler span:hover{
+  background-color: rgba(6, 51, 82, 0.4) !important;
+}
+.navbar-toggler span+span:hover{
+  background-color: rgba(6, 51, 82, 0.4) !important;
+}
+.navbar-toggler span+span+span:hover{
+  background-color: rgba(6, 51, 82, 0.4) !important;
+}
+
+/* navbar-expand */
+.navbar-expand-lg .navbar-nav .nav-ling{
+  padding: 1rem 1rem;
+  font-size: 2.5rem;
+  position: relative;
+}
+.navbar-expand-lg .navbar-nav .nav-link.active{
+  color: #ff6320de;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+  border-bottom: 4px solid #ff6320de;
+}
+.navbar-expand-lg .navbar-nav .nav-link.active{
+  border-bottom: 4px solid #ff6320de;
+  color: #ff6320de;
+}
+
+/* navbar-button */
+.btn{
+  background-color: #ff6320de;
+  border-color: #ff6320de;
+  color: rgba(228, 233, 237, 1);
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+}
+.btn:hover{
+  background-color: #105586;
+  border-color: #105586;
+  color: rgba(228, 233, 237, 1);
+  transition: .5s ease-in-out;
+  transform: scale(1.35);
+}
+.btn:focus{
+  outline: none !important;
+  box-shadow: none;
+}
+.btn:hover:focus{
+  outline: none !important;
+  box-shadow: none;
+}
+
+/* Heading */
+.heading{
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1.4;
+  text-align: center;
+  color: rgba(228, 233, 237, 1);
+  margin-top: 180px;
+  margin-bottom: 8px;
+  min-height: 100px;
+}
+
+/* All page left column props */
+.column-left{
+  min-height: 896px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(12,32,59,.9)));
+  background-image: linear-gradient(180deg, rgb(12,32,59,.1), rgba(12,32,59,.25)), url(images_benim/aboutme/pp\ \(1\).jpg);
+  background-position: 0px 0px, 100% 10%;
+  background-size: auto, cover;
+  background-attachment: scroll, scroll;
+  object-fit: cover;
+  -o-object-fit: cover; 
+}
+
+/* All page right column section title props */
+.column-right .section-title{
+  margin-top: 0px;
+  padding: 10rem 2rem 1rem 2rem;
+  font-size: 5rem;
+  color: rgba(228, 233, 237, 1);
+  font-weight: 500;
+  text-align: center;
+}
+
+/* All page paragraph props */
+.paragraph{
+  margin-top: 15px;
+  padding: 2rem 2rem 2rem 2rem;
+  font-size: 1.1rem;
+  color: rgba(228, 233, 237, 1);
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.aboutme-section{
+  margin-top: 10px;
+  padding: 5rem 2rem 1rem 2rem;
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 400;
+}
+.aboutme-title{
+  padding: 0rem 2rem 1rem 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 400;
+}
+.aboutme-paragraph{
+  margin-top: 15px;
+  padding: 2rem 2rem 2rem 2rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+/* Projects section props */
+.my-project-right{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(12,32,59,.9)));
+  background-image: linear-gradient(180deg, rgb(12,32,59,.1), rgba(12,32,59,.25)), url(images_benim/aboutme/Yeni_resized/a3.png);
+  background-position: 0px 0px, 100% 10%;
+  background-size: auto, cover;
+  background-attachment: scroll, scroll;
+  object-fit: cover;
+  -o-object-fit: cover; 
+}
+.project-section{
+  margin-top: 20px;
+  padding: 5rem 2rem 1rem 2rem;
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 400;
+}
+.project-title-1{
+  padding: 0rem 2rem 1rem 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 400, bold;
+}
+.project-title-2{
+  padding: 0rem 2rem 1rem 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 400, bold;
+}
+.project-paragraph-1{
+  margin-top: 15px;
+  padding: 2rem 2rem 2rem 2rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+.project-paragraph-2{
+  margin-top: 15px;
+  padding: 2rem 2rem 2rem 2rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  text-align: justify;
+}
+.fa{
+  font-size: 4rem;
+  color: rgba(228, 233, 237, 1);
+  align-items: center;
+}
+.fa:hover{
+  transition:  .2s ease-in-out;
+  transform: scale(1.5);
+  color: #ff6320de;
+}
+.project-1 .fa{
+  padding: 2rem 2rem 2rem 2rem;
+}
+.project-2 .fa{
+  padding: 2rem 2rem 2rem 2rem;
+}
+.project-1 a:hover{
+  color: #ff6320de;
+}
+.project-2 a:hover{
+  color: #ff6320de;
+}
+
+/* slide up button prop */
+.goupbtn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+}
+
+/*-- Slider --*/
+
+.carousel-inner{
+  height: 100%;
+}
+.carousel-item::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.45;
+}
+.carousel-item{
+  min-height: 600px;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-caption{
+  transform: translateY(-50%);
+  bottom: initial;
+  top: 50%;
+}
+
+.row .column-left-1{
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+.carousel-caption h5{
+  font-size: 60px;
+  font-weight: 400;
+}
+.carousel-caption p{
+  font-size: 18px;
+  top: 10rem;
+  padding-bottom: 0px;
+  text-align: justify;
+}
